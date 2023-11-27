@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoir </title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css">-->
+    <link rel="stylesheet" type="text/js" href="index.js">
+
+    <style type="text/css">
+        body{
+            background-color: rgb(190, 189, 189);
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 100PX;
+            background-color: white;
+            border: 15px;
+            box-shadow: 2px 2px 5px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        #btn-envoyer {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #19ab0c;
+            color: white;
+            border: solid 2px white;
+            cursor: pointer;
+            width: 200px;
+        }
+        div{
+            margin: auto;
+            width: 200px;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <form id="Mon_formulaire" enctype="multipart/from-data" action="/" method="post">
+        <fieldset>
+            <legend>FORMULAIRE:</legend>
+
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" placeholder="votre nom" name="nom" required>
+
+            <label for="Prenom">Prenom:</label>
+            <input type="text" id="Prenom" placeholder="votre prenom" name="Prenom" required>
+
+            <label>Genre:</label>
+            <input type="radio" id="genreH" name="genre" value="homme">Homme</label>
+            
+                <input type="radio" id="genreF" name="genre" value="femme">femme
+            
+            <label for="pays">Pays:</label>
+            <select id="pays" name="pays">//OPTION POUR TOUT LES PAYS DU MONDE
+
+            </select>
+
+            <label for="auteurs">Auteurs:</label>
+
+            <select id="auteurs" name="auteurs">OPIONS SUR LAUTEURS</select>
+
+            <label for="cv">CV(PDF uniquement):</label>
+            <input type="file" id="cv" name="cv" accept=".pdf" required>
+
+            <label for="images">Images:</label>
+            <input type="file" id="images" name="images" accept=".jpg,s.png" multiple>
+            <div>
+                <input type="submit" value="Envoyer" id="btn-envoyer">
+            </div>
+            
+
+        </fieldset>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="mon_api.js"></script>
+</body>
+
+</html>
